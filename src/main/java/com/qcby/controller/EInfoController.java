@@ -15,17 +15,17 @@ public class EInfoController {
     private UserService us;
 
     @RequestMapping("/register")
-    public String register(Model model){
-        model.addAttribute("user",new User());
-        model.addAttribute("msg","");
+    public String register(Model model) {
+        model.addAttribute("user", new User());
+        model.addAttribute("msg", "");
         return "register";
     }
 
     @RequestMapping("/insert")
-    public String insert(@ModelAttribute User user, Model model){
-        if(us.insert(user)) model.addAttribute("msg","注册成功");
-        else model.addAttribute("msg","注册失败");
-        model.addAttribute("user",new User());
+    public String insert(@ModelAttribute User user, Model model) {
+        if (us.insert(user)) model.addAttribute("msg", "注册成功");
+        else model.addAttribute("msg", "注册失败");
+        model.addAttribute("user", new User());
         return "register";
     }
 }

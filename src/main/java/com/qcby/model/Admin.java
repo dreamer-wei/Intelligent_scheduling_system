@@ -1,11 +1,11 @@
 package com.qcby.model;
 
 public class Admin {
-    private String AdminID="";
-    private String AdminName="";
-    private String AdminEmail="";
-    private String AdminPosition="";
-    private String Store="";
+    private String AdminID = "";
+    private String AdminName = "";
+    private String AdminEmail = "";
+    private String AdminPosition = "";
+    private String Store = "";
 
     public String getAdminID() {
         return AdminID;

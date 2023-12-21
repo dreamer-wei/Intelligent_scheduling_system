@@ -13,6 +13,7 @@
             margin: 20px;
             background-color: #f2f2f2;
         }
+
         .login-container {
             padding: 20px;
             position: absolute;
@@ -23,14 +24,17 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .form-table {
             width: 100%;
             margin-top: 20px;
         }
+
         .form-table td {
             padding: 10px;
             text-align: left;
         }
+
         .form-table input {
             width: 100%;
             padding: 8px;
@@ -38,6 +42,7 @@
             margin-bottom: 10px;
             box-sizing: border-box;
         }
+
         .form-table select {
             width: 100%;
             padding: 8px;
@@ -45,6 +50,7 @@
             margin-bottom: 10px;
             box-sizing: border-box;
         }
+
         .form-table button {
             background-color: #3498db;
             color: #fff;
@@ -64,7 +70,7 @@
                     <label>
                         员工类型:
                         <form:select path="userType" name="op">
-                            <option value="1" >普通员工</option>
+                            <option value="1">普通员工</option>
                             <option value="2">排班管理员</option>
                         </form:select>
                     </label>
@@ -86,9 +92,9 @@
                 <td>
                     <form:button type="submit">登录</form:button>
                 </td>
-<%--                <td>--%>
-<%--                    <a href="/Intelligent_scheduling_system/EInfo/register">注册</a>--%>
-<%--                </td>--%>
+                    <%--                <td>--%>
+                    <%--                    <a href="/Intelligent_scheduling_system/EInfo/register">注册</a>--%>
+                    <%--                </td>--%>
             </tr>
         </table>
     </form:form>

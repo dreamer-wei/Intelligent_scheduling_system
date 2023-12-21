@@ -8,7 +8,7 @@ public class Classes {
     private int StartTime=0;
     private double Duration=0.0;
     private String EmployeeID="";
-    private String StoreID="";
+    private String StoreID = "";
 
     public int getDayName() {
         return DayName;

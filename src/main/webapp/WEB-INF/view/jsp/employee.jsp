@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +87,7 @@
             display: none; /* 默认隐藏所有模块 */
         }
 
-        .module2{
+        .module2 {
             display: none; /* 默认隐藏所有模块 */
         }
 
@@ -148,7 +148,7 @@
         <div class="module2" id="updatePassword">
 
         </div>
-        <div class="module2"  id="submitPreference">
+        <div class="module2" id="submitPreference">
 
         </div>
 

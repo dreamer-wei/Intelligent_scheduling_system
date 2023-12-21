@@ -1,10 +1,10 @@
 package com.qcby.model;
 
 public class Store {
-    private String StoreID="";
-    private String StoreName="";
-    private String StoreAddress="";
-    private Double StoreSize=0.0;
+    private String StoreID = "";
+    private String StoreName = "";
+    private String StoreAddress = "";
+    private Double StoreSize = 0.0;
 
     public String getStoreID() {
         return StoreID;

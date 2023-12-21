@@ -1,11 +1,11 @@
 package com.qcby.model;
 
 public class ClassRule {
-    private String RuleID="";
-    private int RuleType=0;
-    private int Divisor=0;
-    private double RuleTypeValue=0.0;
-    private String StoreID="";
+    private String RuleID = "";
+    private int RuleType = 0;
+    private int Divisor = 0;
+    private double RuleTypeValue = 0.0;
+    private String StoreID = "";
 
     public String getRuleID() {
         return RuleID;

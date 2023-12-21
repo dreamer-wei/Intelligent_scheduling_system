@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +61,7 @@
 
         }
 
-        .module2{
+        .module2 {
             display: none; /* 默认隐藏所有模块 */
         }
 
@@ -182,7 +182,8 @@ ${msg}
         <div class="module2" id="importModule">
             <h3>门店信息导入</h3>
             <!-- 门店信息录入内容 -->
-            <form:form modelAttribute="store" method="post" id="importForm" action="${pageContext.request.contextPath}/store/insert">
+            <form:form modelAttribute="store" method="post" id="importForm"
+                       action="${pageContext.request.contextPath}/store/insert">
                 <!-- 添加门店信息的表单 -->
                 <label for="importStoreName">门店名称：</label>
                 <form:input type="text" id="importStoreName" name="importStoreName" path="storeName"/>
@@ -198,16 +199,19 @@ ${msg}
         <div class="module2" id="modifyModule">
             <h3>门店信息修改</h3>
             <!-- 门店信息修改内容 -->
-            <form id="modifyForm">
+            <form:form modelAttribute="store" method="post" id="modifyForm"
+                       action="${pageContext.request.contextPath}/store/update">
                 <!-- 添加门店信息的表单 -->
+                <label for="modifyStoreName">门店编号：</label>
+                <form:input type="text" id="modifyStoreID" name="modifyStoreID" path="storeID"/>
                 <label for="modifyStoreName">门店名称：</label>
-                <input type="text" id="modifyStoreName" name="modifyStoreName" required>
+                <form:input type="text" id="modifyStoreName" name="modifyStoreName" path="storeName"/>
                 <label for="modifyStoreLocation">门店位置：</label>
-                <input type="text" id="modifyStoreLocation" name="modifyStoreLocation" required>
+                <form:input type="text" id="modifyStoreLocation" name="modifyStoreLocation" path="storeAddress"/>
                 <label for="modifyStoreSize">工作面积大小：</label>
-                <input type="text" id="modifyStoreSize" name="modifyStoreSize" required>
-                <button type="button" onclick="modifyStore()">修改</button>
-            </form>
+                <form:input type="text" id="modifyStoreSize" name="modifyStoreSize" path="storeSize"/>
+                <form:button type="submit">修改</form:button>
+            </form:form>
         </div>
 
         <!-- 统计门店职工人数模块 -->
@@ -235,23 +239,24 @@ ${msg}
         <div class="module2" id="importModule2">
             <h3>新员工信息导入</h3>
             <!-- 录入基本信息、审批员工偏好修改和统计门店员工人数内容 -->
-            <form>
+            <form:form modelAttribute="employee" method="post"
+                       action="${pageContext.request.contextPath}/employee/insert">
                 <!-- 添加员工信息的表单 -->
                 <label for="employeeName">员工姓名：</label>
-                <input type="text" id="employeeName" name="employeeName" required>
+                <form:input type="text" id="employeeName" name="employeeName" path="employeeName"/>
                 <label for="employeeName">员工邮箱：</label>
-                <input type="email" id="employeeEmail" name="employeeEmail" required>
+                <form:input type="email" id="employeeEmail" name="employeeEmail" path="employeeEmail"/>
                 <label for="employeeRole">员工职位：</label>
-                <select id="employeeRole" name="employeeRole">
-                    <option value="manager">经理</option>
-                    <option value="Deputy-manager">副经理</option>
-                    <option value="Group-leader">组长</option>
-                    <option value="Cashier">收银</option>
-                    <option value="Sales">导购</option>
-                    <option value="Warehouse-staff">库房</option>
-                </select>
-                <button type="submit">提交</button>
-            </form>
+                <form:select id="employeeRole" name="employeeRole" path="employeePosition">
+                    <form:option value="manager">经理</form:option>
+                    <form:option value="Deputy-manager">副经理</form:option>
+                    <form:option value="Group-leader">组长</form:option>
+                    <form:option value="Cashier">收银</form:option>
+                    <form:option value="Sales">导购</form:option>
+                    <form:option value="Warehouse-staff">库房</form:option>
+                </form:select>
+                <form:button type="submit">提交</form:button>
+            </form:form>
         </div>
     </div>
 

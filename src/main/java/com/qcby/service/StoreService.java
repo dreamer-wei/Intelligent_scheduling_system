@@ -4,4 +4,6 @@ import com.qcby.model.Store;
 
 public interface StoreService {
     public boolean insert(Store s);
+
+    public boolean update(Store s);
 }

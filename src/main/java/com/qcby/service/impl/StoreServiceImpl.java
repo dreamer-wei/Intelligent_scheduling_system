@@ -7,12 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StoreServiceImpl  implements StoreService {
+public class StoreServiceImpl implements StoreService {
     @Autowired
     public StoreDao storeDao;
+
     @Override
-    public boolean insert(Store s){
-        if (storeDao.insert(s)>0) return true;
+    public boolean insert(Store s) {
+        if (storeDao.insert(s) > 0) return true;
+        return false;
+    }
+
+    @Override
+    public boolean update(Store s) {
+        if (storeDao.update(s) > 0) return true;
         return false;
     }
 }

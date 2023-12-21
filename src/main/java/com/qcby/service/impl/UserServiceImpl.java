@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
         List<User> userList = userDao.findByID(u);
         if (!userList.isEmpty()
                 && userList.get(0).getUserPassword().equals(u.getUserPassword())) {
-            session.setAttribute("user",userList.get(0));
+            session.setAttribute("user", userList.get(0));
             return true;
         }
         return false;
@@ -34,11 +34,13 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+
     @Override
     public boolean insert(User u) {
-        if (userDao.insert(u)>0) return true;
+        if (userDao.insert(u) > 0) return true;
         return false;
     }
+
     @Override
     public List<User> findAll() {
         return userDao.findAll();

@@ -7,22 +7,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/main")
 public class MainController {
     @RequestMapping("/index")
-    public String ToMain(){
+    public String ToMain() {
         return "index";
     }
 
     @RequestMapping("/storeAdidas")
-    public String Toad(){
+    public String Toad() {
         return "storeAdidas";
     }
 
     @RequestMapping("/storeNike")
-    public String Tonk(){
+    public String Tonk() {
         return "storeNike";
     }
 
     @RequestMapping("/storeLiNing")
-    public String Toln(){
+    public String Toln() {
         return "storeLiNing";
     }
 }

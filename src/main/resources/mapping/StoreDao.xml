@@ -6,6 +6,14 @@
     <!--  在这里书写sql语句  -->
     <!--  查询所有  -->
     <insert id="insert" parameterType="com.qcby.model.Store">
-        INSERT INTO storeinfo VALUES (#{StoreID},#{StoreName},#{StoreAddress},#{StoreSize});
+        INSERT INTO storeinfo
+        VALUES (#{StoreID}, #{StoreName}, #{StoreAddress}, #{StoreSize});
     </insert>
+    <update id="update" parameterType="com.qcby.model.Store">
+        UPDATE storeinfo
+        SET StoreName=#{StoreName},
+            StoreAddress=#{StoreAddress},
+            StoreSize=#{StoreSize}
+        WHERE StoreID = #{StoreID};
+    </update>
 </mapper>

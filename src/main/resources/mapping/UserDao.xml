@@ -6,17 +6,23 @@
     <!--  在这里书写sql语句  -->
     <!--  查询所有  -->
     <select id="findByID" parameterType="com.qcby.model.User" resultType="com.qcby.model.User">
-        SELECT * FROM user WHERE UserID=#{UserID} AND UserPassword=#{UserPassword} AND UserType=#{UserType};
+        SELECT *
+        FROM user
+        WHERE UserID = #{UserID}
+          AND UserPassword = #{UserPassword}
+          AND UserType = #{UserType};
     </select>
     <select id="findAll" resultType="com.qcby.model.User">
-        SELECT * FROM user;
+        SELECT *
+        FROM user;
     </select>
     <insert id="insert" parameterType="com.qcby.model.User">
-        INSERT INTO user VALUES (#{UserID},#{UserName},'123456',#{UserType});
+        INSERT INTO user
+        VALUES (#{UserID}, #{UserName}, '123456', #{UserType});
     </insert>
     <update id="updatePassword" parameterType="com.qcby.model.User">
-        update user
-        set UserPassword=#{UserPassword}
-        where UserID=#{UserID};
+        UPDATE user
+        SET UserPassword=#{UserPassword}
+        WHERE UserID = #{UserID};
     </update>
 </mapper>

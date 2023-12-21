@@ -1,9 +1,9 @@
 package com.qcby.model;
 
 public class EmployeePreference {
-    private String EmployeeID="";
-    private int PreferDay=0;
-    private String PreferTime="";
+    private String EmployeeID = "";
+    private int PreferDay = 0;
+    private String PreferTime = "";
 
     public String getEmployeeID() {
         return EmployeeID;

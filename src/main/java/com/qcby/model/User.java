@@ -1,10 +1,11 @@
 package com.qcby.model;
 
 public class User {
-    private String UserID="";
-    private String UserName="";
-    private String UserPassword="";
+    private String UserID = "";
+    private String UserName = "";
+    private String UserPassword = "";
     private Integer UserType;
+
     public String getUserID() {
         return UserID;
     }

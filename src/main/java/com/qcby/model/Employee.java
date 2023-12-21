@@ -1,11 +1,11 @@
 package com.qcby.model;
 
 public class Employee {
-    private String EmployeeID="";
-    private String EmployeeName="";
-    private String EmployeeEmail="";
-    private String EmployeePosition="";
-    private String Store="";
+    private String EmployeeID = "";
+    private String EmployeeName = "";
+    private String EmployeeEmail = "";
+    private String EmployeePosition = "";
+    private String Store = "";
 
     public String getEmployeeID() {
         return EmployeeID;
