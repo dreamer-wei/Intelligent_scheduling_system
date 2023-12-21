@@ -1,15 +1,15 @@
 package com.qcby.model;
 
 public class EmployeePreference {
-    private String EmployeeID = "";
+    private int EmployeeID = 0;
     private int PreferDay = 0;
     private String PreferTime = "";
 
-    public String getEmployeeID() {
+    public int getEmployeeID() {
         return EmployeeID;
     }
 
-    public void setEmployeeID(String employeeID) {
+    public void setEmployeeID(int employeeID) {
         EmployeeID = employeeID;
     }
 

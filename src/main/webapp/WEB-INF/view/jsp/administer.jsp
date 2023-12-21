@@ -230,7 +230,7 @@ ${msg}
                 <tbody>
                 <c:forEach items="${EmployeeNum}" var="EmployeeNum">
                     <tr>
-                        <td>${EmployeeNum.Store}</td>
+                        <td>${EmployeeNum.StoreID}</td>
                         <td>${EmployeeNum.EmployeeNum}</td>
                     </tr>
                 </c:forEach>

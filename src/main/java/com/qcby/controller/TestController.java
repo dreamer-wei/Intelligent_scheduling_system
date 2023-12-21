@@ -19,7 +19,7 @@ public class TestController {
     @RequestMapping("/employee")
     public String employee(Model model, HttpSession session) {
         User u = new User();
-        u.setUserID("123456");
+        u.setUserID(123456);
         u.setUserName("123456");
         session.setAttribute("user", u);
         return "employee";

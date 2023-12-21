@@ -1,16 +1,16 @@
 package com.qcby.model;
 
 public class User {
-    private String UserID = "";
+    private int UserID = 0;
     private String UserName = "";
     private String UserPassword = "";
-    private Integer UserType;
+    private int UserType;
 
-    public String getUserID() {
+    public int getUserID() {
         return UserID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(int userID) {
         UserID = userID;
     }
 
@@ -30,11 +30,11 @@ public class User {
         UserPassword = userPassword;
     }
 
-    public Integer getUserType() {
+    public int getUserType() {
         return UserType;
     }
 
-    public void setUserType(Integer userType) {
+    public void setUserType(int userType) {
         UserType = userType;
     }
 }

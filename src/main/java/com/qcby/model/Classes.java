@@ -3,12 +3,12 @@ package com.qcby.model;
 import java.util.Date;
 
 public class Classes {
-    private int DayName=0;
+    private int DayName = 0;
     private Date Day;
-    private int StartTime=0;
-    private double Duration=0.0;
-    private String EmployeeID="";
-    private String StoreID = "";
+    private int StartTime = 0;
+    private double Duration = 0.0;
+    private int EmployeeID = 0;
+    private int StoreID = 0;
 
     public int getDayName() {
         return DayName;
@@ -42,19 +42,19 @@ public class Classes {
         Duration = duration;
     }
 
-    public String getEmployeeID() {
+    public int getEmployeeID() {
         return EmployeeID;
     }
 
-    public void setEmployeeID(String employeeID) {
+    public void setEmployeeID(int employeeID) {
         EmployeeID = employeeID;
     }
 
-    public String getStoreID() {
+    public int getStoreID() {
         return StoreID;
     }
 
-    public void setStoreID(String storeID) {
+    public void setStoreID(int storeID) {
         StoreID = storeID;
     }
 }

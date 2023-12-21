@@ -1,17 +1,17 @@
 package com.qcby.model;
 
 public class Admin {
-    private String AdminID = "";
+    private int AdminID = 0;
     private String AdminName = "";
     private String AdminEmail = "";
     private String AdminPosition = "";
-    private String Store = "";
+    private int StoreID = 0;
 
-    public String getAdminID() {
+    public int getAdminID() {
         return AdminID;
     }
 
-    public void setAdminID(String adminID) {
+    public void setAdminID(int adminID) {
         AdminID = adminID;
     }
 
@@ -39,11 +39,11 @@ public class Admin {
         AdminPosition = adminPosition;
     }
 
-    public String getStore() {
-        return Store;
+    public int getStoreID() {
+        return StoreID;
     }
 
-    public void setStore(String store) {
-        Store = store;
+    public void setStoreID(int storeID) {
+        StoreID = storeID;
     }
 }

@@ -7,14 +7,14 @@
     <!--  查询所有  -->
     <insert id="insert" parameterType="com.qcby.model.Employee">
         INSERT INTO employee
-        VALUES (#{EmployeeID}, #{EmployeeName}, #{EmployeeEmail}, #{EmployeePosition}, #{Store});
+        VALUES (#{EmployeeID}, #{EmployeeName}, #{EmployeeEmail}, #{EmployeePosition}, #{StoreID});
     </insert>
     <update id="update" parameterType="com.qcby.model.Employee">
         UPDATE employee
         SET EmployeeName=#{EmployeeName},
             EmployeeEmail=#{EmployeeEmail},
             EmployeePosition=#{EmployeePosition},
-            Store=#{Store}
+            StoreID=#{StoreID}
         WHERE EmployeeID = #{EmployeeID};
     </update>
 </mapper>

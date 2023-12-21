@@ -17,8 +17,8 @@
         WHERE StoreID = #{StoreID};
     </update>
     <select id="QueryEmployeeNum" resultType="map">
-        SELECT COUNT(*) AS EmployeeNum, Store
+        SELECT COUNT(*) AS EmployeeNum, StoreID
         FROM Employee
-        GROUP BY Store;
+        GROUP BY StoreID;
     </select>
 </mapper>

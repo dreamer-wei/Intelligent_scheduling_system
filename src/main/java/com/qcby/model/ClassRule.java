@@ -1,17 +1,17 @@
 package com.qcby.model;
 
 public class ClassRule {
-    private String RuleID = "";
+    private int RuleID = 0;
     private int RuleType = 0;
     private int Divisor = 0;
     private double RuleTypeValue = 0.0;
-    private String StoreID = "";
+    private int StoreID = 0;
 
-    public String getRuleID() {
+    public int getRuleID() {
         return RuleID;
     }
 
-    public void setRuleID(String ruleID) {
+    public void setRuleID(int ruleID) {
         RuleID = ruleID;
     }
 
@@ -39,11 +39,11 @@ public class ClassRule {
         RuleTypeValue = ruleTypeValue;
     }
 
-    public String getStoreID() {
+    public int getStoreID() {
         return StoreID;
     }
 
-    public void setStoreID(String storeID) {
+    public void setStoreID(int storeID) {
         StoreID = storeID;
     }
 }
