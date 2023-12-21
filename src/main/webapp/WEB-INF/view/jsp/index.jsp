@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,12 +52,17 @@
         }
 
         #storeInfo {
-            margin: 20px;
+            margin: 10px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        #storeInfo img {
+            width: 50%;
+            height: auto;
         }
 
         #storeInfo h2 a {
@@ -91,7 +96,7 @@
 <nav>
     <ul>
         <li><a href="/Intelligent_scheduling_system/login/submit">登录</a></li>
-<%--        <li>&gt;</li>--%>
+        <%--        <li>&gt;</li>--%>
         <li>门店信息</li>
     </ul>
 </nav>
@@ -102,7 +107,6 @@
     <a href="index">首页</a> &gt;
     门店信息
 </div>
-
 <!-- 门店品牌信息的简介 -->
 <div id="storeInfo">
     <h2><a href="storeAdidas">阿迪达斯运动鞋销售店</a></h2>
