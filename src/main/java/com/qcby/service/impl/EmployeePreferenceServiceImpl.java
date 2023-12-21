@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeePerferenceServiceImpl implements EmployeePerferenceService {
+public class EmployeePreferenceServiceImpl implements EmployeePerferenceService {
     @Autowired
     public EmployeePreferenceDao employeePreferenceDao;
 

@@ -5,4 +5,20 @@
 <mapper namespace="com.qcby.dao.ClassRuleDao">
     <!--  在这里书写sql语句  -->
     <!--  查询所有  -->
+    <insert id="insert" parameterType="com.qcby.model.ClassRule">
+        INSERT INTO classrule(RuleID,RuleType,Divisor,RuleTypeValue)
+        VALUES (#{RuleID}, #{RuleType}, #{Divisor}, #{RuleTypeValue});
+    </insert>
+    <update id="update" parameterType="com.qcby.model.ClassRule">
+        UPDATE classrule
+        SET RuleType=#{RuleType},
+            Divisor=#{Divisor},
+            RuleTypeValue=#{RuleTypeValue}
+        WHERE RuleID = #{RuleID};
+    </update>
+    <delete id="delete" parameterType="com.qcby.model.ClassRule">
+        DELETE
+        FROM classrule
+        WHERE RuleID = #{RuleID};
+    </delete>
 </mapper>

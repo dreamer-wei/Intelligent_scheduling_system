@@ -1,6 +1,8 @@
 package com.qcby.controller;
 
+import com.qcby.model.ClassRule;
 import com.qcby.model.Employee;
+import com.qcby.model.EmployeePreference;
 import com.qcby.model.Store;
 import com.qcby.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ public class StoreController {
         else model.addAttribute("msg", "插入失败");
         model.addAttribute("store", new Store());
         model.addAttribute("employee", new Employee());
+        model.addAttribute("employeePreference", new EmployeePreference());
+        model.addAttribute("classRule", new ClassRule());
         return "administer";
     }
 
@@ -30,6 +34,8 @@ public class StoreController {
         else model.addAttribute("msg", "修改失败");
         model.addAttribute("store", new Store());
         model.addAttribute("employee", new Employee());
+        model.addAttribute("employeePreference", new EmployeePreference());
+        model.addAttribute("classRule", new ClassRule());
         return "administer";
     }
 }

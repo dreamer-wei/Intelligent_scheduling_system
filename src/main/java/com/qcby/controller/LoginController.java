@@ -1,9 +1,6 @@
 package com.qcby.controller;
 
-import com.qcby.model.Employee;
-import com.qcby.model.EmployeePreference;
-import com.qcby.model.Store;
-import com.qcby.model.User;
+import com.qcby.model.*;
 import com.qcby.service.StoreService;
 import com.qcby.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +35,7 @@ public class LoginController {
                 model.addAttribute("store", new Store());
                 model.addAttribute("employee", new Employee());
                 model.addAttribute("employeePreference", new EmployeePreference());
+                model.addAttribute("classRule", new ClassRule());
                 session.setAttribute("EmployeeNum", ss.QueryEmployeeNum());
                 return "administer";
             }
