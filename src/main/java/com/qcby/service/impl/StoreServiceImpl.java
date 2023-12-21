@@ -16,14 +16,12 @@ public class StoreServiceImpl implements StoreService {
 
     @Override
     public boolean insert(Store s) {
-        if (storeDao.insert(s) > 0) return true;
-        return false;
+        return storeDao.insert(s) > 0;
     }
 
     @Override
     public boolean update(Store s) {
-        if (storeDao.update(s) > 0) return true;
-        return false;
+        return storeDao.update(s) > 0;
     }
 
     @Override

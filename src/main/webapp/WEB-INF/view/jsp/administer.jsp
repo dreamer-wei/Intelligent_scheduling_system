@@ -275,6 +275,41 @@ ${msg}
                 <form:button type="submit">提交</form:button>
             </form:form>
         </div>
+
+        <div class="module2" id="modifyModule2">
+            <h3>员工偏好修改</h3>
+            <!-- 员工偏好修改内容 -->
+            <form:form modelAttribute="employeePreference" method="post"
+                       action="${pageContext.request.contextPath}/employee/updatePreference">
+                <!-- 修改员工偏好的表单 -->
+                <label for="employeeID">员工编号：</label>
+                <form:input type="text" id="employeeID" name="employeeID" path="employeeID"/>
+                <label for="preferDay">偏好工作日：</label>
+                <form:select id="preferDay" name="preferDay" path="preferDay">
+                    <form:option value="1">周一</form:option>
+                    <form:option value="2">周二</form:option>
+                    <form:option value="3">周三</form:option>
+                    <form:option value="4">周四</form:option>
+                    <form:option value="5">周五</form:option>
+                    <form:option value="6">周六</form:option>
+                    <form:option value="7">周日</form:option>
+                </form:select>
+                <label for="preferTime">偏好工作时间：</label>
+                <form:select id="preferTime" name="preferTime" path="preferTime">
+                    <form:option value="8">8:00</form:option>
+                    <form:option value="9">9:00</form:option>
+                    <form:option value="10">10:00</form:option>
+                    <form:option value="11">11:00</form:option>
+                    <form:option value="12">12:00</form:option>
+                    <form:option value="13">13:00</form:option>
+                    <form:option value="14">14:00</form:option>
+                    <form:option value="15">15:00</form:option>
+                    <form:option value="16">16:00</form:option>
+                    <form:option value="17">17:00</form:option>
+                </form:select>
+                <form:button type="submit">提交</form:button>
+            </form:form>
+        </div>
     </div>
 
     <!-- 排班管理模块 -->

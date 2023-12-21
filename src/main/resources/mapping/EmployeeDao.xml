@@ -5,11 +5,11 @@
 <mapper namespace="com.qcby.dao.EmployeeDao">
     <!--  在这里书写sql语句  -->
     <!--  查询所有  -->
-    <insert id="insert" parameterType="com.qcby.dao.EmployeeDao">
+    <insert id="insert" parameterType="com.qcby.model.Employee">
         INSERT INTO employee
         VALUES (#{EmployeeID}, #{EmployeeName}, #{EmployeeEmail}, #{EmployeePosition}, #{Store});
     </insert>
-    <update id="update" parameterType="com.qcby.dao.EmployeeDao">
+    <update id="update" parameterType="com.qcby.model.Employee">
         UPDATE employee
         SET EmployeeName=#{EmployeeName},
             EmployeeEmail=#{EmployeeEmail},

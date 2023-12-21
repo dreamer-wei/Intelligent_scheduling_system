@@ -13,13 +13,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public boolean insert(Employee e) {
-        if (employeeDao.insert(e) > 0) return true;
-        return false;
+        return employeeDao.insert(e) > 0;
     }
 
     @Override
     public boolean update(Employee e) {
-        if (employeeDao.update(e) > 0) return true;
-        return false;
+        return employeeDao.update(e) > 0;
     }
 }

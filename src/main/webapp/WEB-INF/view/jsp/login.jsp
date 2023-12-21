@@ -35,6 +35,10 @@
             text-align: left;
         }
 
+        #submit {
+            text-align: center;
+        }
+
         .form-table input {
             width: 100%;
             padding: 8px;
@@ -52,12 +56,15 @@
         }
 
         .form-table button {
+            width: 100px;
+            height: auto;
             background-color: #3498db;
             color: #fff;
             padding: 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            text-align: center;
         }
     </style>
 </head>
@@ -89,7 +96,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td id="submit">
                     <form:button type="submit">登录</form:button>
                 </td>
                     <%--                <td>--%>

@@ -28,17 +28,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean Login(User u) {
         List<User> userList = userDao.findByID(u);
-        if (!userList.isEmpty()
-                && userList.get(0).getUserPassword().equals(u.getUserPassword())) {
-            return true;
-        }
-        return false;
+        return !userList.isEmpty()
+                && userList.get(0).getUserPassword().equals(u.getUserPassword());
     }
 
     @Override
     public boolean insert(User u) {
-        if (userDao.insert(u) > 0) return true;
-        return false;
+        return userDao.insert(u) > 0;
     }
 
     @Override

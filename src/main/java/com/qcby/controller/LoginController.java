@@ -1,6 +1,7 @@
 package com.qcby.controller;
 
 import com.qcby.model.Employee;
+import com.qcby.model.EmployeePreference;
 import com.qcby.model.Store;
 import com.qcby.model.User;
 import com.qcby.service.StoreService;
@@ -36,6 +37,7 @@ public class LoginController {
             else {
                 model.addAttribute("store", new Store());
                 model.addAttribute("employee", new Employee());
+                model.addAttribute("employeePreference", new EmployeePreference());
                 session.setAttribute("EmployeeNum", ss.QueryEmployeeNum());
                 return "administer";
             }
