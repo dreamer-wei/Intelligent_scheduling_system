@@ -36,6 +36,7 @@ public class LoginController {
             else {
                 model.addAttribute("store", new Store());
                 model.addAttribute("employee", new Employee());
+                session.setAttribute("EmployeeNum", ss.QueryEmployeeNum());
                 return "administer";
             }
         model.addAttribute("user", new User());

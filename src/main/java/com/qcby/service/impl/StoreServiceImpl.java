@@ -6,6 +6,9 @@ import com.qcby.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class StoreServiceImpl implements StoreService {
     @Autowired
@@ -21,5 +24,10 @@ public class StoreServiceImpl implements StoreService {
     public boolean update(Store s) {
         if (storeDao.update(s) > 0) return true;
         return false;
+    }
+
+    @Override
+    public List<Map<String, Object>> QueryEmployeeNum() {
+        return storeDao.QueryEmployeeNum();
     }
 }

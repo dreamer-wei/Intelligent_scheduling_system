@@ -1,5 +1,6 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,6 +220,22 @@ ${msg}
             <h3>统计门店职工人数</h3>
             <!-- 统计门店职工人数内容 -->
             <!-- 这里可以添加相应的表格来显示统计结果 -->
+            <table>
+                <thead>
+                <tr>
+                    <th>门店名称</th>
+                    <th>职工人数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${EmployeeNum}" var="EmployeeNum">
+                    <tr>
+                        <td>${EmployeeNum.Store}</td>
+                        <td>${EmployeeNum.EmployeeNum}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
     </div>
 

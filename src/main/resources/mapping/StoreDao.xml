@@ -16,4 +16,9 @@
             StoreSize=#{StoreSize}
         WHERE StoreID = #{StoreID};
     </update>
+    <select id="QueryEmployeeNum" resultType="map">
+        SELECT COUNT(*) AS EmployeeNum, Store
+        FROM Employee
+        GROUP BY Store;
+    </select>
 </mapper>
