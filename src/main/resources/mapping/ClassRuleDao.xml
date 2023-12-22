@@ -21,4 +21,8 @@
         FROM classrule
         WHERE RuleID = #{RuleID};
     </delete>
+    <select id="QueryAll" resultType="com.qcby.model.ClassRule">
+        SELECT *
+        FROM classrule;
+    </select>
 </mapper>

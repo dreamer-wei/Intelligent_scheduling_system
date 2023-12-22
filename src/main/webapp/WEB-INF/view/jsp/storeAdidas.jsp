@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,10 +93,14 @@
 <!-- 门店信息 -->
 <div id="storeInfo">
     <h2>门店信息</h2>
-    <p><strong>序号:</strong> 001</p>
-    <p><strong>名称:</strong> 阿迪达斯运动鞋销售店</p>
-    <p><strong>地址:</strong> 123 Main Street, City</p>
-    <p><strong>面积:</strong> 200 平方米</p>
+    <%--    <p><strong>序号:</strong> 001</p>--%>
+    <%--    <p><strong>名称:</strong> 阿迪达斯运动鞋销售店</p>--%>
+    <%--    <p><strong>地址:</strong> 123 Main Street, City</p>--%>
+    <%--    <p><strong>面积:</strong> 200 平方米</p>--%>
+    <p><strong>序号:</strong> ${Store.storeID}</p>
+    <p><strong>名称:</strong> ${Store.storeName}</p>
+    <p><strong>地址:</strong> ${Store.storeAddress}</p>
+    <p><strong>面积:</strong> ${Store.storeSize}</p>
 </div>
 
 <!-- 登录功能 -->
