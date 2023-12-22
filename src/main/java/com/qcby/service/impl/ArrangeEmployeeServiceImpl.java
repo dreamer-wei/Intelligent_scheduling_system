@@ -85,6 +85,8 @@ if (lack_state) { //有缺失则加入未排班的员工
     public List<Map<String, ArrayList<Employee>>> getWeekScheduleResult(List<String> timeList, List<Integer> employeeNum) {
         this.timeList = timeList;
         this.employeeNum = employeeNum;
+        spMap = new HashMap<>();
+        saMap = new HashMap<>();
         prepareEmployee();
         for (int i = 0; i < 7; i++) {
             arrangeByDay();

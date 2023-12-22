@@ -131,6 +131,7 @@
             moduleToShow.style.display = "block";
         }
     </script>
+
 </head>
 <body>
 
@@ -152,7 +153,7 @@
     <a href="/Intelligent_scheduling_system/login/submit">登录</a> &gt;
     管理员页面
 </div>
-<a href="/Intelligent_scheduling_system/Schedule/arrangeEmployee">点击这里进行员工安排</a>
+<a href="/Intelligent_scheduling_system/Schedule/arrangeEmployee">点击此处查看排班表</a>
 <!-- 导航条 -->
 <div class="breadcrumb">
     <a href="#" onclick="showModule('storeManagementModule')">门店信息管理</a> |
@@ -335,114 +336,112 @@ ${msg}
         <div class="submodule">
             <a href="#" onclick="showModule2('scheduleRegularModule')">排班表生成</a>
         </div>
-        <!-- 排班表 -->
-        <div class="submodule" id="scheduleShowModule">
-            <iframe style="width: 100%; height: 2500px; border: 0px;"
-                    src="/Intelligent_scheduling_system/schedule"></iframe>
+        <!-- 排班规则管理模块 -->
+        <div class="module2" id="scheduleRuleManagementModule">
+            <h3>排班规则管理</h3>
+            <!-- 排班规则导入内容 -->
+            <form:form modelAttribute="classRule" method="post" id="importScheduleRuleForm"
+                       action="${pageContext.request.contextPath}/classRule/insert">
+                <label>请输入要导入的规则信息：</label>
+                <label>规则ID：</label>
+                <form:input type="text" id="importRuleID" name="importRuleID" path="ruleID"/>
+                <label>规则类型（1为开店规则，2为关店规则，3为运营规则）：</label>
+                <form:select id="importRuleType" name="importRuleType" path="ruleType">
+                    <form:option value="1">开店规则</form:option>
+                    <form:option value="2">关店规则</form:option>
+                    <form:option value="3">运营规则</form:option>
+                </form:select>
+                <label>规则参数（用于计算需要人数，门店面积 / 参数 = 运营所需人数）：</label>
+                <form:input type="text" id="importRuleDivisor" name="importRuleDivisor" path="divisor"/>
+                <label>规则对应的值（以小时为单位计，如1代表提前1小时开店）：</label>
+                <form:input type="text" id="importRuleTypeValue" name="importRuleTypeValue" path="ruleTypeValue"/>
+                <!-- 添加其他排班规则导入表单字段 -->
+                <form:button type="submit">导入</form:button>
+            </form:form>
+            <!-- 排班规则修改内容 -->
+            <form:form modelAttribute="classRule" method="post" id="modifyScheduleRuleForm"
+                       action="${pageContext.request.contextPath}/classRule/update">
+                <label>请输入要修改的规则信息：</label>
+                <label>规则ID：</label>
+                <form:input type="text" id="modifyRuleID" name="modifyRuleID" path="ruleID"/>
+                <label>规则类型（1为开店规则，2为关店规则，3为运营规则）：</label>
+                <form:select id="modifyRuleType" name="modifyRuleType" path="ruleType">
+                    <form:option value="1">开店规则</form:option>
+                    <form:option value="2">关店规则</form:option>
+                    <form:option value="3">运营规则</form:option>
+                </form:select>
+                <label>规则参数（用于计算需要人数，门店面积 / 参数 = 运营所需人数）：</label>
+                <form:input type="text" id="modifyRuleDivisor" name="modifyRuleDivisor" path="divisor"/>
+                <label>规则对应的值（以小时为单位计，如1代表提前1小时开店）：</label>
+                <form:input type="text" id="modifyRuleTypeValue" name="modifyRuleTypeValue" path="ruleTypeValue"/>
+                <!-- 添加其他排班规则修改表单字段 -->
+                <form:button type="submit">修改</form:button>
+            </form:form>
+            <!-- 排班规则删除内容 -->
+            <form:form modelAttribute="classRule" method="post" id="deleteScheduleRuleForm"
+                       action="${pageContext.request.contextPath}/classRule/delete">
+                <label>请输入要删除掉规则信息：</label>
+                <label>规则ID：</label>
+                <form:select id="deleteRuleID" name="deleteRuleID" path="ruleID">
+                    <c:forEach items="${RuleQuery}" var="RuleQuery">
+                        <form:option value="${RuleQuery.ruleID}">${RuleQuery.ruleID}</form:option>
+                    </c:forEach>
+                </form:select>
+                <!-- 添加其他排班规则删除表单字段 -->
+                <form:button type="sumit">删除</form:button>
+            </form:form>
+            <!-- 排班规则查看内容 -->
+            <!-- 这里可以添加相应的表格来显示排班规则 -->
         </div>
+
+        <!-- 排班表生成模块 -->
+        <div class="module2" id="scheduleRegularModule">
+            <h3>排班表生成</h3>
+            <!-- 排班模式选取内容 -->
+            <form id="selectScheduleRuleForm1">
+                <label>开店规则：</label>
+                <select id="selectRole1" name="selectRole1">
+
+                </select>
+                <!-- 添加其他排班规则选取表单字段 -->
+                <button type="button" onclick="selectScheduleRule()">选取</button>
+            </form>
+
+            <form id="selectScheduleRuleForm2">
+                <label>关店规则：</label>
+                <select id="selectRole2" name="selectRole2">
+
+                </select>
+                <!-- 添加其他排班规则选取表单字段 -->
+                <button type="button" onclick="selectScheduleRule()">选取</button>
+            </form>
+
+            <form id="selectScheduleRuleForm3">
+                <label>运营规则：</label>
+                <select id="selectRole3" name="selectRole3">
+
+                </select>
+                <!-- 添加其他排班规则选取表单字段 -->
+                <button type="button" onclick="selectScheduleRule()">选取</button>
+            </form>
+
+            <!-- 排班模式选取内容 -->
+            <form id="selectScheduleModeForm">
+                <label for="selectMode">排班模式：</label>
+                <select id="selectMode" name="selectMode">
+                    <option value="week">按周</option>
+                    <option value="day">按日</option>
+                </select>
+                <!-- 添加其他排班模式选取表单字段 -->
+                <button type="button" onclick="selectScheduleMode()">选取</button>
+            </form>
+        </div>
+        <!-- 排班表 -->
+        <%--        <div class="submodule" id="scheduleShowModule">--%>
+        <%--            <iframe style="width: 100%; height: 2500px; border: 0px;"--%>
+        <%--                    src="/Intelligent_scheduling_system/schedule"></iframe>--%>
+        <%--        </div>--%>
     </div>
-
-    <!-- 排班规则管理模块 -->
-    <div class="module2" id="scheduleRuleManagementModule">
-        <h3>排班规则管理</h3>
-        <!-- 排班规则导入内容 -->
-        <form:form modelAttribute="classRule" method="post" id="importScheduleRuleForm"
-                   action="${pageContext.request.contextPath}/classRule/insert">
-            <label>请输入要导入的规则信息：</label>
-            <label>规则ID：</label>
-            <form:input type="text" id="importRuleID" name="importRuleID" path="ruleID"/>
-            <label>规则类型（1为开店规则，2为关店规则，3为运营规则）：</label>
-            <form:select id="importRuleType" name="importRuleType" path="ruleType">
-                <form:option value="1">开店规则</form:option>
-                <form:option value="2">关店规则</form:option>
-                <form:option value="3">运营规则</form:option>
-            </form:select>
-            <label>规则参数（用于计算需要人数，门店面积 / 参数 = 运营所需人数）：</label>
-            <form:input type="text" id="importRuleDivisor" name="importRuleDivisor" path="divisor"/>
-            <label>规则对应的值（以小时为单位计，如1代表提前1小时开店）：</label>
-            <form:input type="text" id="importRuleTypeValue" name="importRuleTypeValue" path="ruleTypeValue"/>
-            <!-- 添加其他排班规则导入表单字段 -->
-            <form:button type="submit">导入</form:button>
-        </form:form>
-        <!-- 排班规则修改内容 -->
-        <form:form modelAttribute="classRule" method="post" id="modifyScheduleRuleForm"
-                   action="${pageContext.request.contextPath}/classRule/update">
-            <label>请输入要修改的规则信息：</label>
-            <label>规则ID：</label>
-            <form:input type="text" id="modifyRuleID" name="modifyRuleID" path="ruleID"/>
-            <label>规则类型（1为开店规则，2为关店规则，3为运营规则）：</label>
-            <form:select id="modifyRuleType" name="modifyRuleType" path="ruleType">
-                <form:option value="1">开店规则</form:option>
-                <form:option value="2">关店规则</form:option>
-                <form:option value="3">运营规则</form:option>
-            </form:select>
-            <label>规则参数（用于计算需要人数，门店面积 / 参数 = 运营所需人数）：</label>
-            <form:input type="text" id="modifyRuleDivisor" name="modifyRuleDivisor" path="divisor"/>
-            <label>规则对应的值（以小时为单位计，如1代表提前1小时开店）：</label>
-            <form:input type="text" id="modifyRuleTypeValue" name="modifyRuleTypeValue" path="ruleTypeValue"/>
-            <!-- 添加其他排班规则修改表单字段 -->
-            <form:button type="submit">修改</form:button>
-        </form:form>
-        <!-- 排班规则删除内容 -->
-        <form:form modelAttribute="classRule" method="post" id="deleteScheduleRuleForm"
-                   action="${pageContext.request.contextPath}/classRule/delete">
-            <label>请输入要删除掉规则信息：</label>
-            <label>规则ID：</label>
-            <form:select id="deleteRuleID" name="deleteRuleID" path="ruleID">
-                <c:forEach items="${RuleQuery}" var="RuleQuery">
-                    <form:option value="${RuleQuery.ruleID}">${RuleQuery.ruleID}</form:option>
-                </c:forEach>
-            </form:select>
-            <!-- 添加其他排班规则删除表单字段 -->
-            <form:button type="sumit">删除</form:button>
-        </form:form>
-        <!-- 排班规则查看内容 -->
-        <!-- 这里可以添加相应的表格来显示排班规则 -->
-    </div>
-
-    <!-- 排班表生成模块 -->
-    <div class="module2" id="scheduleRegularModule">
-        <h3>排班表生成</h3>
-        <!-- 排班模式选取内容 -->
-        <form id="selectScheduleRuleForm1">
-            <label>开店规则：</label>
-            <select id="selectRole1" name="selectRole1">
-
-            </select>
-            <!-- 添加其他排班规则选取表单字段 -->
-            <button type="button" onclick="selectScheduleRule()">选取</button>
-        </form>
-
-        <form id="selectScheduleRuleForm2">
-            <label>关店规则：</label>
-            <select id="selectRole2" name="selectRole2">
-
-            </select>
-            <!-- 添加其他排班规则选取表单字段 -->
-            <button type="button" onclick="selectScheduleRule()">选取</button>
-        </form>
-
-        <form id="selectScheduleRuleForm3">
-            <label>运营规则：</label>
-            <select id="selectRole3" name="selectRole3">
-
-            </select>
-            <!-- 添加其他排班规则选取表单字段 -->
-            <button type="button" onclick="selectScheduleRule()">选取</button>
-        </form>
-
-        <!-- 排班模式选取内容 -->
-        <form id="selectScheduleModeForm">
-            <label for="selectMode">排班模式：</label>
-            <select id="selectMode" name="selectMode">
-                <option value="week">按周</option>
-                <option value="day">按日</option>
-            </select>
-            <!-- 添加其他排班模式选取表单字段 -->
-            <button type="button" onclick="selectScheduleMode()">选取</button>
-        </form>
-    </div>
-
 
     <!-- 查询工作时间模块 -->
     <div class="module" id="queryModule">

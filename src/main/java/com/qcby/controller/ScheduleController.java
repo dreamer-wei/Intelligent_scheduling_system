@@ -51,6 +51,8 @@ public class ScheduleController {
     @GetMapping("/arrangeEmployee") //为方案安排人员
     public String arrangeEmployee(Model model) {
         //if (按照周排)
+        timeList = new ArrayList<>();
+        employeeNum = new ArrayList<>();
         timeList.add("8:00-10:00");
         timeList.add("10:00-12:00");
         timeList.add("12:00-14:00");
