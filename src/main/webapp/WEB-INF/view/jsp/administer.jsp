@@ -313,15 +313,32 @@ ${msg}
     </div>
 
     <!-- 排班管理模块 -->
+    <%--    <div class="module" id="scheduleModule">--%>
+    <%--        <h2>排班管理</h2>--%>
+    <%--        <!-- 排班规则管理内容 -->--%>
+    <%--        <div class="submodule">--%>
+    <%--            <a href="#" onclick="showModule2('scheduleRuleManagementModule')">排班规则管理</a>--%>
+    <%--        </div>--%>
+    <%--        <!-- 排班管理内容 -->--%>
+    <%--        <div class="submodule">--%>
+    <%--            <a href="#" onclick="showModule2('scheduleManagementModule')">排班管理</a>--%>
+    <%--        </div>--%>
+    <%--    </div>--%>
+    <!-- 排班管理模块 -->
     <div class="module" id="scheduleModule">
         <h2>排班管理</h2>
-        <!-- 排班规则管理内容 -->
+        <!-- 自定义排班规则管理内容 -->
         <div class="submodule">
-            <a href="#" onclick="showModule2('scheduleRuleManagementModule')">排班规则管理</a>
+            <a href="#" onclick="showModule2('scheduleRuleManagementModule')">自定义排班规则管理</a>
         </div>
-        <!-- 排班管理内容 -->
+        <!-- 排班表生成内容 -->
         <div class="submodule">
-            <a href="#" onclick="showModule2('scheduleManagementModule')">排班管理</a>
+            <a href="#" onclick="showModule2('scheduleRegularModule')">排班表生成</a>
+        </div>
+        <!-- 排班表 -->
+        <div class="submodule" id="scheduleShowModule">
+            <iframe style="width: 100%; height: 2500px; border: 0px;"
+                    src="/Intelligent_scheduling_system/schedule"></iframe>
         </div>
     </div>
 
@@ -383,10 +400,10 @@ ${msg}
         <!-- 这里可以添加相应的表格来显示排班规则 -->
     </div>
 
-    <!-- 排班管理模块 -->
-    <div class="module2" id="scheduleManagementModule">
-        <h3>排班管理</h3>
-        <!-- 排班规则选取内容 -->
+    <!-- 排班表生成模块 -->
+    <div class="module2" id="scheduleRegularModule">
+        <h3>排班表生成</h3>
+        <!-- 排班模式选取内容 -->
         <form id="selectScheduleRuleForm1">
             <label>开店规则：</label>
             <select id="selectRole1" name="selectRole1">

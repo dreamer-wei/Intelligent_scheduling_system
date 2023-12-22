@@ -40,4 +40,9 @@ public class MainController {
         session.setAttribute("Store", ls.get(0));
         return "storeLiNing";
     }
+
+    @RequestMapping("/schedule")
+    public String Tosc() {
+        return "schedule";
+    }
 }
