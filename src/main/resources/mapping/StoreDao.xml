@@ -21,9 +21,4 @@
         FROM Employee
         GROUP BY StoreID;
     </select>
-    <select id="StoreInfo" resultType="com.qcby.model.Store">
-        SELECT *
-        FROM storeinfo
-        WHERE StoreID = #{StoreID};
-    </select>
 </mapper>

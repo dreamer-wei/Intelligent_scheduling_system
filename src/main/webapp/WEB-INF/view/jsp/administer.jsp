@@ -371,11 +371,7 @@ ${msg}
                    action="${pageContext.request.contextPath}/classRule/delete">
             <label>请输入要删除掉规则信息：</label>
             <label>规则ID：</label>
-            <form:select id="deleteRuleID" name="deleteRuleID" path="ruleID">
-                <c:forEach items="${RuleQuery}" var="RuleQuery">
-                    <form:option value="${RuleQuery.ruleID}">${RuleQuery.ruleID}</form:option>
-                </c:forEach>
-            </form:select>
+            <form:input type="text" id="deleteRuleID" name="deleteRuleID" path="ruleID"/>
             <!-- 添加其他排班规则删除表单字段 -->
             <form:button type="sumit">删除</form:button>
         </form:form>

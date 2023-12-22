@@ -11,6 +11,4 @@ public interface StoreService {
     public boolean update(Store s);
 
     public List<Map<String, Object>> QueryEmployeeNum();
-
-    public List<Store> QueryStoreInfo(int StoreID);
 }

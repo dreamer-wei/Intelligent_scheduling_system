@@ -95,7 +95,7 @@
 <!-- 导航栏 -->
 <nav>
     <ul>
-        <%--        <li><a href="/Intelligent_scheduling_system/login/submit">登录</a></li>--%>
+        <li><a href="/Intelligent_scheduling_system/login/submit">登录</a></li>
         <%--        <li>&gt;</li>--%>
         <li>门店信息</li>
     </ul>
