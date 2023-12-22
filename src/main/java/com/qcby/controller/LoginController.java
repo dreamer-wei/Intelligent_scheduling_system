@@ -2,6 +2,7 @@ package com.qcby.controller;
 
 import com.qcby.model.*;
 import com.qcby.service.ClassRuleService;
+import com.qcby.service.EmployeeService;
 import com.qcby.service.StoreService;
 import com.qcby.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class LoginController {
     private StoreService ss;
     @Autowired
     private ClassRuleService crs;
+
+    @Autowired
+    private EmployeeService es;
     @RequestMapping("/submit")
     public String submit(Model model) {
         // 向模型中添加属性msg与值，可以在html页面中取出并渲染

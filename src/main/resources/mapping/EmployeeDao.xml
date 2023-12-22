@@ -17,4 +17,10 @@
             StoreID=#{StoreID}
         WHERE EmployeeID = #{EmployeeID};
     </update>
+    <select id="findByPreference" parameterType="map" resultType="com.qcby.model.Employee">
+        SELECT e.*
+        FROM employee e
+        JOIN employee_preference ep ON e.employeeID = ep.employeeID
+        WHERE ep.PreferTime >= #{StartTime} AND ep.PreferTime &lt;= #{EndTime};
+    </select>
 </mapper>
