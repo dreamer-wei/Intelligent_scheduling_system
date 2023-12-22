@@ -152,7 +152,7 @@
     <a href="/Intelligent_scheduling_system/login/submit">登录</a> &gt;
     管理员页面
 </div>
-
+<a href="/Intelligent_scheduling_system/Schedule/arrangeEmployee">点击这里进行员工安排</a>
 <!-- 导航条 -->
 <div class="breadcrumb">
     <a href="#" onclick="showModule('storeManagementModule')">门店信息管理</a> |
