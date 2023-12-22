@@ -28,4 +28,9 @@ public class StoreServiceImpl implements StoreService {
     public List<Map<String, Object>> QueryEmployeeNum() {
         return storeDao.QueryEmployeeNum();
     }
+
+    @Override
+    public List<Store> QueryStoreInfo(int StoreID) {
+        return storeDao.StoreInfo(StoreID);
+    }
 }

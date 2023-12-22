@@ -6,6 +6,8 @@ import com.qcby.service.ClassRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ClassRuleServiceImpl implements ClassRuleService {
     @Autowired
@@ -24,5 +26,10 @@ public class ClassRuleServiceImpl implements ClassRuleService {
     @Override
     public boolean delete(ClassRule cr) {
         return classRuleDao.delete(cr) > 0;
+    }
+
+    @Override
+    public List<ClassRule> QueryAll() {
+        return classRuleDao.QueryAll();
     }
 }

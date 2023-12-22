@@ -139,17 +139,29 @@
         <h2>账户管理</h2>
         <!-- 添加具体内容和表单等 -->
         <div class="submodule">
-            <a href="#" onclick="showModule('importModule')">修改我的密码</a>
+            <a href="#" onclick="showModule2('updatePassword')">修改我的密码</a>
         </div>
         <div class="submodule">
-            <a href="#" onclick="showModule2('importModule')">提交偏好修改申请</a>
+            <a href="#" onclick="showModule2('submitPreference')">提交偏好修改申请</a>
         </div>
 
         <div class="module2" id="updatePassword">
-
+            <form>
+                <!-- 修改密码的表单 -->
+                <label for="oldPassword">旧密码：</label>
+                <input type="text" id="oldPassword" required>
+                <label for="newPassword">新密码：</label>
+                <input type="text" id="newPassword" required>
+                <label for="finalPassword">确认密码：</label>
+                <input type="text" id="finalPassword" required>
+                <button type="submit">提交</button>
+            </form>
         </div>
         <div class="module2" id="submitPreference">
+            <form>
+                <!-- 修改偏好的表单 -->
 
+            </form>
         </div>
 
     </div>
@@ -159,9 +171,9 @@
         <h2>查询我的工作时间</h2>
         <!-- 月、周、日三个子模块 -->
         <div class="submodule">
-            <a href="#">按月查询</a>
-            <a href="#">按周查询</a>
-            <a href="#">按日查询</a>
+            按月查询
+            按周查询
+            按日查询
         </div>
         <!-- 添加具体内容和表单等 -->
     </div>

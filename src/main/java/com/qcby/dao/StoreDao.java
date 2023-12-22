@@ -11,4 +11,6 @@ public interface StoreDao {
     public int update(Store s);
 
     public List<Map<String, Object>> QueryEmployeeNum();
+
+    public List<Store> StoreInfo(int StoreID);
 }
