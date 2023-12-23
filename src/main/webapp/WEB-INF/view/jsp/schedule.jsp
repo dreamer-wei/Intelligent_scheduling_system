@@ -28,16 +28,16 @@
     </style>
 </head>
 <body>
-<h2>Schedule Result</h2>
+<h2>排班表结果</h2>
 
-<table>
-    <thead>
-    <tr>
-        <th>Time</th>
-        <th>Employees</th>
-    </tr>
-    </thead>
-    <tbody>
+<%--<table>--%>
+<%--    <thead>--%>
+<%--    <tr>--%>
+<%--        <th>Time</th>--%>
+<%--        <th>Employees</th>--%>
+<%--    </tr>--%>
+<%--    </thead>--%>
+<%--    <tbody>--%>
 <%--    <tr th:each="time : ${timeList}">--%>
 <%--        <td th:text="${time}"></td>--%>
 <%--        <td>--%>
@@ -71,8 +71,8 @@
         </c:forEach>
 
     </table>
-    </tbody>
-</table>
+<%--    </tbody>--%>
+<%--</table>--%>
 </body>
 </html>
 

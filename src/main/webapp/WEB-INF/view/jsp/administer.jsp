@@ -153,7 +153,6 @@
     <a href="/Intelligent_scheduling_system/login/submit">登录</a> &gt;
     管理员页面
 </div>
-<a href="/Intelligent_scheduling_system/Schedule/arrangeEmployee">点击此处查看排班表</a>
 <!-- 导航条 -->
 <div class="breadcrumb">
     <a href="#" onclick="showModule('storeManagementModule')">门店信息管理</a> |
@@ -401,7 +400,7 @@ ${msg}
             <form id="selectScheduleRuleForm1">
                 <label>开店规则：</label>
                 <select id="selectRole1" name="selectRole1">
-
+                    <option>无</option>
                 </select>
                 <!-- 添加其他排班规则选取表单字段 -->
                 <button type="button" onclick="selectScheduleRule()">选取</button>
@@ -410,7 +409,7 @@ ${msg}
             <form id="selectScheduleRuleForm2">
                 <label>关店规则：</label>
                 <select id="selectRole2" name="selectRole2">
-
+                    <option>无</option>
                 </select>
                 <!-- 添加其他排班规则选取表单字段 -->
                 <button type="button" onclick="selectScheduleRule()">选取</button>
@@ -419,7 +418,7 @@ ${msg}
             <form id="selectScheduleRuleForm3">
                 <label>运营规则：</label>
                 <select id="selectRole3" name="selectRole3">
-
+                    <option>两小时一个班次</option>
                 </select>
                 <!-- 添加其他排班规则选取表单字段 -->
                 <button type="button" onclick="selectScheduleRule()">选取</button>
@@ -435,6 +434,7 @@ ${msg}
                 <!-- 添加其他排班模式选取表单字段 -->
                 <button type="button" onclick="selectScheduleMode()">选取</button>
             </form>
+            <a href="/Intelligent_scheduling_system/Schedule/arrangeEmployee">点击此处查看排班表</a>
         </div>
         <!-- 排班表 -->
         <%--        <div class="submodule" id="scheduleShowModule">--%>
