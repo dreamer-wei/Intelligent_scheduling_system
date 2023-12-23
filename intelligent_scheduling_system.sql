@@ -11,7 +11,7 @@
  Target Server Version : 80033 (8.0.33)
  File Encoding         : 65001
 
- Date: 21/12/2023 23:53:33
+ Date: 23/12/2023 00:07:17
 */
 
 SET NAMES utf8mb4;
@@ -85,27 +85,56 @@ CREATE TABLE `employee`  (
 -- ----------------------------
 -- Records of employee
 -- ----------------------------
-INSERT INTO `employee` VALUES (0, '张小龙', '987654321@gmail.com', 'manager', 0);
-INSERT INTO `employee` VALUES (1, '张三', 'zhang.san@example.com', '门店经理', 1);
-INSERT INTO `employee` VALUES (2, '李四', 'li.si@example.com', '副经理', 2);
-INSERT INTO `employee` VALUES (3, '王五', 'wang.wu@example.com', '小组长', 1);
-INSERT INTO `employee` VALUES (4, '赵六', 'zhao.liu@example.com', '店员（收银）', 3);
-INSERT INTO `employee` VALUES (5, '陈七', 'chen.qi@example.com', '店员（导购）', 2);
-INSERT INTO `employee` VALUES (6, '周八', 'zhou.ba@example.com', '店员（库房）', 1);
-INSERT INTO `employee` VALUES (7, '孙九', 'sun.jiu@example.com', '门店经理', 3);
-INSERT INTO `employee` VALUES (8, '杨十', 'yang.shi@example.com', '副经理', 1);
-INSERT INTO `employee` VALUES (9, '吴十一', 'wu.shi.yi@example.com', '小组长', 2);
-INSERT INTO `employee` VALUES (10, '郑十二', 'zheng.shi.er@example.com', '店员（收银）', 3);
-INSERT INTO `employee` VALUES (41, '刘四十一', 'liu.41@example.com', '店员（收银）', 2);
-INSERT INTO `employee` VALUES (42, '韩四十二', 'han.42@example.com', '店员（导购）', 1);
-INSERT INTO `employee` VALUES (43, '朱四十三', 'zhu.43@example.com', '店员（库房）', 3);
-INSERT INTO `employee` VALUES (44, '秦四十四', 'qin.44@example.com', '门店经理', 1);
-INSERT INTO `employee` VALUES (45, '许四十五', 'xu.45@example.com', '副经理', 2);
-INSERT INTO `employee` VALUES (46, '孙四十六', 'sun.46@example.com', '小组长', 3);
-INSERT INTO `employee` VALUES (47, '杨四十七', 'yang.47@example.com', '店员（收银）', 1);
-INSERT INTO `employee` VALUES (48, '吴四十八', 'wu.48@example.com', '店员（导购）', 2);
-INSERT INTO `employee` VALUES (49, '郑四十九', 'zheng.49@example.com', '店员（库房）', 3);
-INSERT INTO `employee` VALUES (50, '周五十', 'zhou.50@example.com', '门店经理', 1);
+INSERT INTO `employee` VALUES (1, '张磊', 'zhang.lei@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (2, '李娜', 'li.na@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (3, '王宇', 'wang.yu@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (4, '赵莉', 'zhao.li@example.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (5, '刘强', 'liu.qiang@example.com', '销售员', 1);
+INSERT INTO `employee` VALUES (6, '陈静', 'chen.jing@example.com', '职员', 2);
+INSERT INTO `employee` VALUES (7, '周勇', 'zhou.yong@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (8, '孙丽', 'sun.li@example.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (9, '杨勇', 'yang.yong@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (10, '吴婷', 'wu.ting@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (11, '郑华', 'zheng.hua@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (12, '王涛', 'wang.tao@example.com', '经理', 2);
+INSERT INTO `employee` VALUES (13, '赵婷', 'zhao.ting@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (14, '张宇', 'zhang.yu@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (15, '李霞', 'li.xia@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (16, '刘明', 'liu.ming@example.com', '职员', 2);
+INSERT INTO `employee` VALUES (17, '陈娜', 'chen.na@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (18, '周涛', 'zhou.tao@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (19, '孙磊', 'sun.lei@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (20, '杨丽', 'yang.li@example.com', '职员', 2);
+INSERT INTO `employee` VALUES (21, '郑宇', 'zheng.yu@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (22, '王艳', 'wang.yan@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (23, '赵娜', 'zhao.na@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (24, '张涛', 'zhang.tao@example.com', '经理', 2);
+INSERT INTO `employee` VALUES (25, '李明', 'li.ming@example.com', '销售员', 1);
+INSERT INTO `employee` VALUES (26, '刘婷', 'li.ting@example.com', '职员', 2);
+INSERT INTO `employee` VALUES (27, '陈强', 'chen.qiang@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (28, '周丽', 'zhou.li@example.com', '经理', 2);
+INSERT INTO `employee` VALUES (29, '孙强', 'sun.qiang@gmail.com', '销售员', 1);
+INSERT INTO `employee` VALUES (30, '杨娟', 'yang.juan@example.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (31, '吴宇', 'wu.yu@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (32, '郑娟', 'zheng.juan@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (33, '王强', 'wang.qiang@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (34, '赵涛', 'zhao.tao@example.com', '经理', 2);
+INSERT INTO `employee` VALUES (35, '张艳', 'zhang.yan@example.com', '销售员', 1);
+INSERT INTO `employee` VALUES (36, '李强', 'li.qiang@example.com', '职员', 2);
+INSERT INTO `employee` VALUES (37, '刘梅', 'liu.mei@example.com', '助理经理', 1);
+INSERT INTO `employee` VALUES (38, '陈明', 'chen.ming@example.com', '经理', 2);
+INSERT INTO `employee` VALUES (39, '周婷', 'zhou.ting@example.com', '销售员', 1);
+INSERT INTO `employee` VALUES (40, '孙强', 'sun.qiang@example.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (41, '杨娜', 'yang.na@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (42, '吴杰', 'wu.jie@example.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (43, '郑婷', 'zheng.ting@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (44, '王涛', 'wang.tao@gmail.com', '销售员', 2);
+INSERT INTO `employee` VALUES (45, '赵芳', 'zhao.fang@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (46, '张洋', 'zhang.yang@example.com', '销售员', 2);
+INSERT INTO `employee` VALUES (47, '李萍', 'li.ping@example.com', '职员', 1);
+INSERT INTO `employee` VALUES (48, '刘明', 'liu.ming@gmail.com', '助理经理', 2);
+INSERT INTO `employee` VALUES (49, '陈丽', 'chen.li@example.com', '经理', 1);
+INSERT INTO `employee` VALUES (50, '周杰', 'zhou.jie@example.com', '销售员', 2);
 
 -- ----------------------------
 -- Table structure for employee_preference
@@ -114,13 +143,63 @@ DROP TABLE IF EXISTS `employee_preference`;
 CREATE TABLE `employee_preference`  (
   `EmployeeID` int NOT NULL,
   `PreferDay` int NULL DEFAULT NULL,
-  `PreferTime` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `PreferTime` decimal(3, 1) NULL DEFAULT NULL,
   PRIMARY KEY (`EmployeeID`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of employee_preference
 -- ----------------------------
+INSERT INTO `employee_preference` VALUES (1, 1, 8.0);
+INSERT INTO `employee_preference` VALUES (2, 1, 10.0);
+INSERT INTO `employee_preference` VALUES (3, 1, 12.0);
+INSERT INTO `employee_preference` VALUES (4, 2, 8.0);
+INSERT INTO `employee_preference` VALUES (5, 2, 10.0);
+INSERT INTO `employee_preference` VALUES (6, 2, 12.0);
+INSERT INTO `employee_preference` VALUES (7, 3, 8.0);
+INSERT INTO `employee_preference` VALUES (8, 3, 10.0);
+INSERT INTO `employee_preference` VALUES (9, 3, 12.0);
+INSERT INTO `employee_preference` VALUES (10, 4, 8.0);
+INSERT INTO `employee_preference` VALUES (11, 4, 10.0);
+INSERT INTO `employee_preference` VALUES (12, 4, 12.0);
+INSERT INTO `employee_preference` VALUES (13, 5, 8.0);
+INSERT INTO `employee_preference` VALUES (14, 5, 10.0);
+INSERT INTO `employee_preference` VALUES (15, 5, 12.0);
+INSERT INTO `employee_preference` VALUES (16, 6, 8.0);
+INSERT INTO `employee_preference` VALUES (17, 6, 10.0);
+INSERT INTO `employee_preference` VALUES (18, 6, 12.0);
+INSERT INTO `employee_preference` VALUES (19, 7, 8.0);
+INSERT INTO `employee_preference` VALUES (20, 7, 10.0);
+INSERT INTO `employee_preference` VALUES (21, 7, 12.0);
+INSERT INTO `employee_preference` VALUES (22, 1, 14.0);
+INSERT INTO `employee_preference` VALUES (23, 2, 14.0);
+INSERT INTO `employee_preference` VALUES (24, 3, 14.0);
+INSERT INTO `employee_preference` VALUES (25, 4, 14.0);
+INSERT INTO `employee_preference` VALUES (26, 5, 14.0);
+INSERT INTO `employee_preference` VALUES (27, 6, 14.0);
+INSERT INTO `employee_preference` VALUES (28, 7, 14.0);
+INSERT INTO `employee_preference` VALUES (29, 1, 16.0);
+INSERT INTO `employee_preference` VALUES (30, 2, 16.0);
+INSERT INTO `employee_preference` VALUES (31, 3, 16.0);
+INSERT INTO `employee_preference` VALUES (32, 4, 16.0);
+INSERT INTO `employee_preference` VALUES (33, 5, 16.0);
+INSERT INTO `employee_preference` VALUES (34, 6, 16.0);
+INSERT INTO `employee_preference` VALUES (35, 7, 16.0);
+INSERT INTO `employee_preference` VALUES (36, 1, 18.0);
+INSERT INTO `employee_preference` VALUES (37, 2, 18.0);
+INSERT INTO `employee_preference` VALUES (38, 3, 18.0);
+INSERT INTO `employee_preference` VALUES (39, 4, 18.0);
+INSERT INTO `employee_preference` VALUES (40, 5, 18.0);
+INSERT INTO `employee_preference` VALUES (41, 6, 18.0);
+INSERT INTO `employee_preference` VALUES (42, 7, 18.0);
+INSERT INTO `employee_preference` VALUES (43, 1, 20.0);
+INSERT INTO `employee_preference` VALUES (44, 2, 20.0);
+INSERT INTO `employee_preference` VALUES (45, 3, 20.0);
+INSERT INTO `employee_preference` VALUES (46, 4, 20.0);
+INSERT INTO `employee_preference` VALUES (47, 5, 20.0);
+INSERT INTO `employee_preference` VALUES (48, 6, 20.0);
+INSERT INTO `employee_preference` VALUES (49, 7, 20.0);
+INSERT INTO `employee_preference` VALUES (50, 7, 22.0);
 
 -- ----------------------------
 -- Table structure for storeinfo
@@ -137,6 +216,9 @@ CREATE TABLE `storeinfo`  (
 -- ----------------------------
 -- Records of storeinfo
 -- ----------------------------
+INSERT INTO `storeinfo` VALUES (1, '阿迪达斯', '西湖区留下街道288号', 400);
+INSERT INTO `storeinfo` VALUES (2, '耐克', '西湖区留下街道300号', 500);
+INSERT INTO `storeinfo` VALUES (3, '李宁', '西湖区留下街道388号', 450);
 
 -- ----------------------------
 -- Table structure for user
